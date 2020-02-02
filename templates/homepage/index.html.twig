@@ -3,5 +3,28 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <a href="{{ path('circus_index') }}">Page affichage cirque</a>
+    <div class="d-flex justify-content-between main__content">
+        {% for i in 0..2 %}
+            <a href="#" class="text-dark">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Lorem ipsum</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur cras amet. </p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    {% for i in 0..4 %}
+        <article class="d-flex justify-content-around" style="margin-top: 2rem">
+            <div class="card flex-row text-center" style="width: 100%;">
+                <img src="https://via.placeholder.com/200x50" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Lorem ipsum</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur cras amet. </p>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
 {% endblock %}
