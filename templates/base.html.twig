@@ -27,7 +27,10 @@
                 </ul>
             </div>
         </nav>
-        {% block body %}{% endblock %}
+        <main>
+            {% block body %}
+            {% endblock %}
+        </main>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

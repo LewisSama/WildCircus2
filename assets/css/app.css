@@ -1,6 +1,10 @@
 body {
     background-color: lightgray;
 }
+main {
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
 .main__content{
     margin-top: 2em;
 }
