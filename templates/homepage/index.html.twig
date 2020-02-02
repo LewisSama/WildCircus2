@@ -3,28 +3,44 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div class="d-flex justify-content-between main__content">
-        {% for i in 0..2 %}
-            <a href="#" class="text-dark">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Lorem ipsum</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur cras amet. </p>
+    <div class="d-flex justify-content-around main__content">
+        <a href="#" class="text-dark homepage__sortingCard_link">
+            <div class="card homepage__sortingCard">
+                <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
+                <div class="card-body homepage__sortingCard_body">
+                    <h5 class="card-title text-center homepage__sortingCard_title">Wilder</h5>
+                    <p class="card-text text-center">Find the wildest circus !</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="text-dark">
+            <div class="card homepage__sortingCard">
+                <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
+                <div class="card-body homepage__sortingCard_body">
+                    <h5 class="card-title text-center homepage__sortingCard_title">Funnier</h5>
+                    <p class="card-text text-center">Find the funniest circus !</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="text-dark">
+            <div class="card homepage__sortingCard">
+                <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">
+                <div class="card-body homepage__sortingCard_body">
+                    <h5 class="card-title text-center homepage__sortingCard_title">Higher</h5>
+                    <p class="card-text text-center">Find the highest circus !</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% for circus in circuses %}
+            <a class="d-flex homepage__listedCard justify-content-around" style="margin-top: 2rem; margin-bottom: 2rem;" href="{{ path('circus_show', {id : circus.id}) }}">
+                <div class="card flex-row text-center text-dark" style="width: 100%;">
+                    <img class="homepage__listedCard__img" src="https://via.placeholder.com/200x50" alt="An image of {{ circus.name }}">
+                    <div class="card-body homepage__listedCard__body">
+                        <h5 class="card-title homepage__listedCard__title">{{ circus.name }}</h5>
+                        <p class="card-text homepage__listedCard__description">{{ circus.description }}</p>
                     </div>
                 </div>
             </a>
-        {% endfor %}
-    </div>
-    {% for circus in circuses %}
-        <article class="d-flex justify-content-around" style="margin-top: 2rem">
-            <div class="card flex-row text-center" style="width: 100%;">
-                <img src="https://via.placeholder.com/200x50" alt="An image of {{ circus.name }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ circus.name }}</h5>
-                    <p class="card-text">{{ circus.description }}</p>
-                </div>
-            </div>
-        </article>
     {% endfor %}
 {% endblock %}

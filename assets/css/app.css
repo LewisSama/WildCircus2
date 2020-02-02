@@ -1,10 +1,33 @@
-body {
-    background-color: lightgray;
+.main__content {
+    margin-top: 4rem;
 }
-main {
-    margin-left: 15rem;
-    margin-right: 15rem;
+.homepage__sortingCard {
+    width: 30vw;
+    font-size: 3vw;
 }
-.main__content{
-    margin-top: 2em;
+.homepage__sortingCard_body {
+    padding: 0;
+}
+.homepage__sortingCard_title {
+    font-size: 4vw;
+}
+.homepage__sortingCard_link {
+    height: 10vh;
+}
+.homepage__listedCard {
+    height: 15vw;
+}
+.homepage__listedCard__title {
+    font-size: 7vw;
+    padding-top: 4%;
+}
+.homepage__listedCard__body {
+    padding: 0;
+}
+.homepage__listedCard__description {
+    display: none;
+}
+.homepage__listedCard__img {
+    width: 20vw;
+    padding-left: 3vw;
 }

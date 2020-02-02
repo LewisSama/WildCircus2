@@ -18,7 +18,5 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
 });
 
-import '../css/app.css';
 import '../scss/app.scss';
-
-
+import '../css/app.css';
